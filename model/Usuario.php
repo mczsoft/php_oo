@@ -1,22 +1,28 @@
 <?php
+require_once 'Pessoa.php';
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+class Usuario extends Pessoa{
+    private $email;
+    private $nascimento;
+    
+    function getEmail() {
+        return $this->email;
+    }
 
-/**
- * Description of Usuario
- *
- * @author PHP
- */
-class Usuario {
-   public $email;
-    public $nome;
-     public $nascimento;
-     
-     public function autenticar() {
+    function getNascimento() {
+        return $this->nascimento;
+    }
+
+    function setEmail($email) {
+        $this->email = $email;
+    }
+
+    function setNascimento($nascimento) {
+        $this->nascimento = $nascimento;
+    }
+
+    
+         public function autenticar() {
          echo 'Usuario autenticou no sistema';
      }
      
@@ -24,9 +30,6 @@ class Usuario {
          echo 'Usuario saiu do sistema';
      }
      
-     public function somar($n1, $n2) {
-         return $n1 + $n2 ;
-     }
 }
 
 
